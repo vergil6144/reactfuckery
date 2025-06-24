@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+body{
+    font-family: 'Inter',sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    text-align: center;
+    background-color: crimson;
+    margin: 0px;
+    padding: 25px;
+    margin-bottom: 85px;
+}
+h1{
+    margin: 0px;
+}
+
+article{
+    display:flex;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 85px;
+}
+
+.imgcont{
+    width: 375px;
+    height: 504px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 1.2rem;
+    margin-right: 40px;
+}
+
+article img{
+    object-fit: cover; 
+    /* centers, makes it so that it doesn't condense to fit*/
+    width: 100%;
+    height: 100%;
+}
