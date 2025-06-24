@@ -1,7 +1,8 @@
 import React from 'react'
 import rs from './data.jsx'
+import Ingredl from './ingredl.jsx'
 export default function Add(){
-    const [ingredients, setIngredients] = React.useState(['oregano','cheese','spices','oranges'])
+    const [ingredients, setIngredients] = React.useState([])
     //react.useState is used to essentially create modifiable properties. i pass in the value of the props, it returns the state's assigned value and a function to be used to change the state.
     function sub(formdata){
         console.log('subed')
@@ -30,10 +31,10 @@ export default function Add(){
                 <button>Add ingredient</button>
             </form>
             {ingredients.length >0 ? <h2>Ingredients on hand</h2>:null}
-            <ul>
-                {ding}
-            </ul>
-            {ingredients.length >=4 ? <div className='get-recipe-container'>
+            {/* <ul>
+                <Ingredl ingredients = {ingredients}/>
+            </ul> */}
+            {/* {ingredients.length >=4 ? <div className='get-recipe-container'>
                 <div>
                     <h3>Ready for a recipe?</h3>
                     <p>Generate a recipe from your list of ingredients</p>
@@ -41,7 +42,8 @@ export default function Add(){
                 <div className='right'>
                     <button onClick={show}>Get recipe</button>
                 </div>
-            </div> :null}
+            </div> :null} */}
+            <Ingredl ingredients={ingredients} show ={show}/>
             {iss ? rs():null}
         </main>
     )
