@@ -16,7 +16,7 @@ export default function App(props) {
 
         function toggle(){
             console.log(object.id)
-            changepads(prev=>{
+            changepads(prev=>{ //only way to change the state of padss, prev is the previous value of pads automatically passed into this func
                 return prev.map(btn=>{
                     return btn.id===object.id?{...btn, on:!btn.on}:btn
                 })
