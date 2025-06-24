@@ -88,3 +88,14 @@ form button::before{
     cursor: pointer;
     align-items:end;
 }
+
+.airec{
+    padding-top: 35px;
+    line-height: 28px;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.airec ul li, .airec ol li {
+    margin-bottom: 8px;
+}

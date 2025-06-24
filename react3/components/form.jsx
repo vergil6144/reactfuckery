@@ -1,6 +1,9 @@
 import React from 'react'
-import rs from './data.jsx'
+import Rs from './data.jsx'
 import Ingredl from './ingredl.jsx'
+
+import { getRecipeFromMistral } from "../ai.js"
+
 export default function Add(){
     const [ingredients, setIngredients] = React.useState([])
     //react.useState is used to essentially create modifiable properties. i pass in the value of the props, it returns the state's assigned value and a function to be used to change the state.
@@ -23,6 +26,13 @@ export default function Add(){
     function show(){
         setiss(prev=>!prev)
     }
+
+    const [rec, setres] = React.useState('')
+
+    async function getrecipe(){
+        const gen = await getRecipeFromMistral(ingredients)
+        setres(gen)
+    }
     return (
         <main>
             <form action={sub}>
@@ -43,8 +53,8 @@ export default function Add(){
                     <button onClick={show}>Get recipe</button>
                 </div>
             </div> :null} */}
-            <Ingredl ingredients={ingredients} show ={show}/>
-            {iss ? rs():null}
+            <Ingredl ingredients={ingredients} getrecipe ={getrecipe}/>
+            {rec && <Rs recipe = {rec}/>}
         </main>
     )
 }

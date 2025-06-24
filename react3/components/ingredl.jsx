@@ -16,7 +16,7 @@ export default function ingredl(props){
                     <p>Generate a recipe from your list of ingredients</p>
                 </div>
                 <div className='right'>
-                    <button onClick={props.show}>Get recipe</button>
+                    <button onClick={props.getrecipe}>Get recipe</button>
                 </div>
             </div> :null}
         </section>
