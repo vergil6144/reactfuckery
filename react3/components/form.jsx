@@ -33,6 +33,13 @@ export default function Add(){
         const gen = await getRecipeFromMistral(ingredients)
         setres(gen)
     }
+    const resection = React.useRef(null)
+    React.useEffect(()=>{
+        if(rec &&resection){
+            resection.current.scrollIntoView({behavior:"smooth"})
+        }
+    },[rec])
+
     return (
         <main>
             <form action={sub}>
@@ -53,8 +60,10 @@ export default function Add(){
                     <button onClick={show}>Get recipe</button>
                 </div>
             </div> :null} */}
-            <Ingredl ingredients={ingredients} getrecipe ={getrecipe}/>
-            {rec && <Rs recipe = {rec}/>}
+            <Ingredl ref = {resection}ingredients={ingredients} getrecipe ={getrecipe}/>
+            <section className='gotten'>
+                {rec && <Rs recipe = {rec}/>}
+            </section>
         </main>
     )
 }
