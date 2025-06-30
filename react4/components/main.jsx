@@ -8,7 +8,7 @@ export default function main(){
     img: "http://i.imgflip.com/1bij.jpg"
     })
     const [memes,setallmemes] = React.useState([])
-    React.useEffect(()=>{
+    React.useEffect(()=>{ //use effect runs whenever anything in its dependencies array changes, if there isn't a dependecies array it runs constantly, if there is an empty dependencies array it runs once when the page loads
         fetch('https://api.imgflip.com/get_memes').then(data=>data.json()).then(data=>setallmemes(data.data.memes))
     },[])
 
@@ -16,9 +16,9 @@ export default function main(){
         const rando = Math.floor(Math.random()*memes.length)
         console.log(rando)
         const thing = memes[rando].url
-        setmeme(prev=>({
-            ...prev,
-            img:thing
+        setmeme(prev=>({ //implicit return
+            ...prev,//all the properties of prev (prev.1 = smthn, prev.2 - smthn)
+            img:thing //changing this one thing
         }))
     }
 
