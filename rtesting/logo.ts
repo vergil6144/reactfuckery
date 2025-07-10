@@ -19,13 +19,13 @@ const convertToAscii = async (
   maxHeight: number,
   hexColor: string,
 ) => {
-  //const chars = ['@', '#', 'S', '%', '?', '*', '+', ';', ':', ',', '.', '$'];
-const chars = [
-  '@', '#', '$', '§', '&', '%', '█', '▓', '▒', '░',
-  '●', '◼', '◾', '■', '◆', '◍', '◯', '*', '+', '=',
-  '~', '^', '?', '/', '\\', '|', '(', ')', '[', ']',
-  '{', '}', '<', '>', '!', ';', ':', ',', '.', '`', '\'', ' ',
-];
+  const chars = ['@', '#', 'S', '%', '?', '*', '+', ';', ':', ',', '.', '$'];
+// const chars = [
+//   '@', '#', '$', '§', '&', '%', '█', '▓', '▒', '░',
+//   '●', '◼', '◾', '■', '◆', '◍', '◯', '*', '+', '=',
+//   '~', '^', '?', '/', '\\', '|', '(', ')', '[', ']',
+//   '{', '}', '<', '>', '!', ';', ':', ',', '.', '`', '\'', ' ',
+// ];
   const img = await loadImage(imagePath);
 
   const canvas = createCanvas(maxWidth, maxHeight);
@@ -39,7 +39,7 @@ const chars = [
   const ctx = canvas.getContext('2d');
   //ctx.drawImage(img, 0, 0, width, height * 0.55); // uncomment if you want normal img
   //ctx.drawImage(img, 0, 0, width / 2, (height * 0.55) / 2);
-  ctx.drawImage(img, 0, 0, width / 4, (height * 0.55) / 4);
+  ctx.drawImage(img, 0, 0, width / 3.5, (height * 0.55) / 4);
 
 
   const imageData = ctx.getImageData(0, 0, width, height).data;

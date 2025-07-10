@@ -37,8 +37,16 @@ main.c{
 .om a{
     text-decoration: none;
     color:#F8F8F2;
-    padding-left: 90px;
-    padding-right: 90px;
+    margin-left: 110px;
+    margin-right: 110px;
     font-weight: bold;
     font-size: 1.2rem;
+      transition: color 0.1s ease-in-out;
+
 }
+
+
+/* 
+make bg text load in all cool like
+add element hover anims
+*/
