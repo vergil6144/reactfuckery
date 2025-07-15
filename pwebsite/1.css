@@ -34,7 +34,7 @@ main.c{
     margin-top: 15px;
 }
 
-.om a{
+.om a, .om Link{
     text-decoration: none;
     color:#F8F8F2;
     margin-left: 110px;
@@ -50,3 +50,12 @@ main.c{
 make bg text load in all cool like
 add element hover anims
 */
+
+.tl{
+    font-size: 18px;
+    margin-top:32px;
+    background-color: #FF79C6;
+    color:#282A36;
+    padding: 6.5px;
+}
+
